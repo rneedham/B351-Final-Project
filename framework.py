@@ -266,6 +266,36 @@ def rarityHelper(v):
         return 4
     pass
 
+#takes a model and data set and trains the initalAlpha until it does not produce an alphaDelta change great enough
+#returns the alpha reached
+def alphaTrainer(model, state, xVar, yVar, initialAlpha, alphaDeltaTolerance):
+    alpha = initialAlpha
+    alphaDelta = 5.0
+    lossA = 0.0
+    lossB = 0.0
+    lossDelta = 0.0
+    for i in range(10):
+        print("step " + str(i))
+        if (abs(alphaDelta) < alphaDeltaTolerance):
+            break
+        
+        lossB = lossA
+        lossA = test_model(LinRegModel, state, xVar, yVar)
+        lossDelta = lossA - lossB
+        print("loss A: " + str(lossA))
+        print("loss B: " + str(lossB))
+        print("loss delta: " + str(lossDelta))
+        if (lossDelta >= 0.0 and not i == 0):
+            alphaDelta = (alphaDelta * -1) / 2
+        else:
+            alphaDelta * 2
+            
+        alpha = alpha * (1 + alphaDelta)
+        LinRegModel.optimizer = tf.train.AdamOptimizer(alpha, epsilon=.0001)
+        print("alpha: " + str(alpha))
+        print("alpha delta: " + str(alphaDelta))
+    return alpha
+
 class Card:
     
     def __init__(self, fileName):
@@ -275,13 +305,9 @@ class Card:
         self.y = np.loadtxt(fileName, delimiter=',', skiprows=1, usecols=(49, 50))
 
 
-
-
-#init_op = tf.global_variables_initializer()
-
-#sess = tf.Session()
-#sess.run(init_op)
 trainingCards = Card("classic.csv")
 testCards = Card("basic.csv")
 trainingState = train_model(LinRegModel, trainingCards.x, trainingCards.y)
 np.save("out.npys", trainingState)
+
+alphaTrainer(LinRegModel, trainingState, testCards.x, testCards.y, 0.00007, 0.5)
