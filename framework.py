@@ -1,5 +1,6 @@
 # From B351 Final Project (Spring 2018)
 # Author: Abe Leite
+from tensorflow.python.ops.variables import RefVariable
 import tensorflow as tf
 import numpy as np
 import heapq
@@ -51,7 +52,7 @@ class Model:
 
         # prepares to save and load states of the variables defined in self.define_variables()
         self.variables = [self.__dict__[key] for key in sorted(var_keys)
-            if type(self.__dict__[key]) == tf.Variable]
+            if type(self.__dict__[key]) == RefVariable]
         
         self.define_model()
         self.loss = self.loss_factory(self.correct_y, self.predicted_y)
@@ -134,7 +135,7 @@ class Model:
                     # the logic behind this is to set patience to -1 if
                     # the current report is one of the n best ones.
                     for good_report in best_n:
-                        if np.array_equal(good_report, report):
+                        if good_report is report:
                             patience = -1
                             break
                     patience += 1
@@ -270,6 +271,7 @@ class Card:
     def __init__(self, fileName):
         converters = { 5: rarityHelper }
         self.x = np.loadtxt(fileName, delimiter=',', converters = converters, skiprows=1, usecols=(2,3,4,5,7,8,9,10,11,12,13,14,15,16,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44))
+        #This is where the "exploded" 2D array will go
         self.y = np.loadtxt(fileName, delimiter=',', skiprows=1, usecols=(49, 50))
 
 
@@ -279,6 +281,7 @@ class Card:
 
 #sess = tf.Session()
 #sess.run(init_op)
-card = Card("classic.csv")
-
-s = train_model(LinRegModel, card.x, card.y)
+trainingCards = Card("classic.csv")
+testCards = Card("basic.csv")
+trainingState = train_model(LinRegModel, trainingCards.x, trainingCards.y)
+np.save("out.npys", trainingState)

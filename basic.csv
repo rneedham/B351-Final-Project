@@ -1,0 +1,134 @@
+Name,Type,Minion,Spell,Weapon,Rarity,Class,Druid,Hunter,Mage,Netural,Paladin,Priest,Rogue,Shaman,Warlock,Warrior,Tribe,Beast,Demon,Dragon,Elemental,General,Mech,Murloc,Pirate,Totem,Cost,Attack,Health,Charge,Taunt,Windfury,Stealth,Divine Shield,Poisonous,Immune,Can't be Targeted by Spells or Hero Powers,Adapt,Lifesteal,Rush,Echo,Magnetic,Spell Damage,Overload,Trigger,Effect,Trigger 2,Effect 2,In % of Decks,Deck winrate
+Core Hound,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,Beast,1,0,0,0,0,0,0,0,0,7,9,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,0.02,38.80
+Ironfur Grizzly,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,Beast,1,0,0,0,0,0,0,0,0,3,3,3,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,0.10,40.60
+Oasis Snapjaw,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,Beast,1,0,0,0,0,0,0,0,0,4,2,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,0.04,42.60
+Bloodfen Raptor,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,Beast,1,0,0,0,0,0,0,0,0,2,3,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,0.10,43.30
+River Crocolisk,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,Beast,1,0,0,0,0,0,0,0,0,2,2,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,0.10,45.00
+Stonetusk Boar,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,Beast,1,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,1.00,45.20
+Timber Wolf,Minion,1,0,0,Free,Hunter,0,1,0,0,0,0,0,0,0,0,Beast,1,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,A,Your other Beasts have +1 Attack.,N,None,1.30,47.10
+Tundra Rhino,Minion,1,0,0,Free,Hunter,0,1,0,0,0,0,0,0,0,0,Beast,1,0,0,0,0,0,0,0,0,5,2,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,A,Your Beasts have Charge.,N,None,5.40,51.20
+Starving Buzzard,Minion,1,0,0,Free,Hunter,0,1,0,0,0,0,0,0,0,0,Beast,1,0,0,0,0,0,0,0,0,5,3,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,W,Whenever you summon a Beast; draw a card.,N,None,0.30,43.40
+Succubus,Minion,1,0,0,Free,Warlock,0,0,0,0,0,0,0,0,1,0,Demon,0,1,0,0,0,0,0,0,0,2,4,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Discard a random card.,N,None,0.30,35.30
+Dread Infernal,Minion,1,0,0,Free,Warlock,0,0,0,0,0,0,0,0,1,0,Demon,0,1,0,0,0,0,0,0,0,6,6,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 1 damage to ALL other characters.,N,None,33.00,54.60
+Voidwalker,Minion,1,0,0,Free,Warlock,0,0,0,0,0,0,0,0,1,0,Demon,0,1,0,0,0,0,0,0,0,1,1,3,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,43.40,55.10
+Fire Elemental,Minion,1,0,0,Free,Shaman,0,0,0,0,0,0,0,1,0,0,Elemental,0,0,0,1,0,0,0,0,0,6,6,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 3 damage.,N,None,33.90,55.70
+Water Elemental,Minion,1,0,0,Free,Mage,0,0,1,0,0,0,0,0,0,0,Elemental,0,0,0,1,0,0,0,0,0,4,3,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Freeze any character damaged by this minion.,N,None,7.90,47.30
+Warsong Commander,Minion,1,0,0,Free,Warrior,0,0,0,0,0,0,0,0,0,1,General,0,0,0,0,1,0,0,0,0,3,2,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,A,Your Charge minions have +1 Attack.,N,None,0.10,24.40
+Kor'kron Elite,Minion,1,0,0,Free,Warrior,0,0,0,0,0,0,0,0,0,1,General,0,0,0,0,1,0,0,0,0,4,4,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,14.80,51.70
+Windspeaker,Minion,1,0,0,Free,Shaman,0,0,0,0,0,0,0,1,0,0,General,0,0,0,0,1,0,0,0,0,4,3,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Give a friendly minion Windfury.,N,None,2.30,43.90
+Northshire Cleric,Minion,1,0,0,Free,Priest,0,0,0,0,0,1,0,0,0,0,General,0,0,0,0,1,0,0,0,0,1,1,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,W,Whenever a minion is healed; draw a card.,N,None,49.50,50.30
+Guardian of Kings,Minion,1,0,0,Free,Paladin,0,0,0,0,1,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,7,5,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Restore 6 Health to your hero.,N,None,0.70,46.10
+Raid Leader,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,3,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,A,Your other minions have +1 Attack.,N,None,7.10,57.90
+Stormwind Champion,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,7,6,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,A,Your other minions have +1/+1.,N,None,4.00,58.50
+Ironforge Rifleman,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,3,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 1 damage.,N,None,0.01,35.90
+Stormpike Commando,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,5,4,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 2 damage.,N,None,0.02,36.50
+Elven Archer,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 1 damage.,N,None,0.20,40.70
+Gnomish Inventor,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,4,2,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Draw a card.,N,None,0.20,40.70
+Dragonling Mechanic,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,4,2,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Summon a 2/1 Mechanical Dragonling.,N,None,0.03,40.80
+Razorfen Hunter,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,3,2,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Summon a 1/1 Boar.,N,None,0.08,42.70
+Darkscale Healer,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,5,4,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Restore 2 Health to all friendly characters.,N,None,0.07,42.70
+Shattered Sun Cleric,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,3,3,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Give a friendly minion +1/+1.,N,None,0.40,43.00
+Nightblade,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,5,4,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 3 damage to the enemy hero.,N,None,0.10,45.50
+Novice Engineer,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,2,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Draw a card.,N,None,1.60,45.70
+Acidic Swamp Ooze,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,2,3,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Destroy your Opponent's weapon.,N,None,10.10,53.80
+Voodoo Doctor,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,1,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Restore 2 Health.,N,None,7.10,55.30
+Frostwolf Warlord,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,5,4,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Gain +1/+1 for each other friendly minion on the battlefield.,N,None,0.50,55.70
+Frostwolf Grunt,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,2,2,2,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,0.03,33.00
+War Golem,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,7,7,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,0.01,35.80
+Lord of the Arena,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,6,6,5,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,0.05,36.30
+Dalaran Mage,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,3,1,4,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,N,None,N,None,0.02,37.10
+Magma Rager,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,3,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,0.02,37.10
+Silverback Patriarch,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,3,1,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,0.03,37.50
+Ogre Magi,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,4,4,4,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,N,None,N,None,0.03,37.80
+Goldshire Footman,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,1,1,2,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,0.07,38.20
+Booty Bay Bodyguard,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,5,5,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,0.04,40.00
+Kobold Geomanacer,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,N,None,N,None,0.10,41.20
+Archmage,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,6,4,7,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,N,None,N,None,0.05,42.00
+Sen'jin Shieldmasta,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,4,3,5,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,0.30,42.50
+Boulderfist Ogre,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,6,6,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,0.20,42.70
+Stormwind Knight,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,4,2,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,0.07,43.00
+Chillwind Yeti,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,4,4,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,0.20,43.90
+Wolfrider,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,3,3,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,0.70,50.70
+Reckless Rocketeer,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,6,5,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,0.30,51.30
+Gurubashi Berkserker,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,5,2,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,W,Whenever this minion takes damage; gain +3 Attack.,N,None,0.10,40.90
+Houndmaster,Minion,1,0,0,Free,Hunter,0,1,0,0,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,4,4,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Give a friendly Beast +2/+2 and Taunt.,N,None,31.30,55.50
+Ironbark Protector,Minion,1,0,0,Free,Druid,1,0,0,0,0,0,0,0,0,0,General,0,0,0,0,1,0,0,0,0,8,8,8,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,1.30,43.80
+Grimscale Oracle,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,Murloc,0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,A,Your Murlocs have +1 Attack.,N,None,0.90,51.20
+Murloc Tidehunter,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,Murloc,0,0,0,0,0,0,1,0,0,2,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Summon a 1/1 Murloc Scout.,N,None,1.00,50.50
+Bluegill Warrior,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,Murloc,0,0,0,0,0,0,1,0,0,2,2,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,0.90,50.90
+Murloc Raider,Minion,1,0,0,Free,Neutral,0,0,0,1,0,0,0,0,0,0,Murloc,0,0,0,0,0,0,1,0,0,1,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,0.70,52.00
+Flametongue Totem,Minion,1,0,0,Free,Shaman,0,0,0,0,0,0,0,1,0,0,Totem,0,0,0,0,0,0,0,0,1,2,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,A,Adjacent minions have +2 Attack.,N,None,38.10,54.80
+Charge,Spell,0,1,0,Free,Warrior,0,0,0,0,0,0,0,0,0,1,None,0,0,0,0,0,0,0,0,0,1,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Give a friendly minion Charge. It can't attack heroes this turn.,N,None,0.10,20.70
+Heroic Strike,Spell,0,1,0,Free,Warrior,0,0,0,0,0,0,0,0,0,1,None,0,0,0,0,0,0,0,0,0,2,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Give your hero +4 Attack this turn.,N,None,1.30,38.60
+Cleave,Spell,0,1,0,Free,Warrior,0,0,0,0,0,0,0,0,0,1,None,0,0,0,0,0,0,0,0,0,2,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 2 damage to two random enemy minions.,N,None,1.00,39.70
+Execute,Spell,0,1,0,Free,Warrior,0,0,0,0,0,0,0,0,0,1,None,0,0,0,0,0,0,0,0,0,2,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Destroy a damaged enemy minion.,N,None,22.10,47.20
+Whirlwind,Spell,0,1,0,Free,Warrior,0,0,0,0,0,0,0,0,0,1,None,0,0,0,0,0,0,0,0,0,1,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 1 damage to ALL minions.,N,None,12.00,49.40
+Shield Block,Spell,0,1,0,Free,Warrior,0,0,0,0,0,0,0,0,0,1,None,0,0,0,0,0,0,0,0,0,3,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Gain 5 Armor. Draw a card.,N,None,78.40,52.20
+Corruption,Spell,0,1,0,Free,Warlock,0,0,0,0,0,0,0,0,1,0,None,0,0,0,0,0,0,0,0,0,1,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Choose an enemy minion. At the start of your turn; destroy it.,N,None,0.20,38.30
+Drain Life,Spell,0,1,0,Free,Warlock,0,0,0,0,0,0,0,0,1,0,None,0,0,0,0,0,0,0,0,0,3,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 2 damage. Restore 2 Health to your hero.,N,None,0.50,43.60
+Shadow Bolt,Spell,0,1,0,Free,Warlock,0,0,0,0,0,0,0,0,1,0,None,0,0,0,0,0,0,0,0,0,3,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 4 damage to a minion.,N,None,2.00,46.40
+Sacrifical Pact,Spell,0,1,0,Free,Warlock,0,0,0,0,0,0,0,0,1,0,None,0,0,0,0,0,0,0,0,0,0,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Destroy a Demon. Restore 5 Health to your hero.,N,None,12.00,50.70
+Mortal Coil,Spell,0,1,0,Free,Warlock,0,0,0,0,0,0,0,0,1,0,None,0,0,0,0,0,0,0,0,0,1,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 1 damage to a minion. If that kills it; draw a card.,N,None,5.90,52.40
+Soulfire,Spell,0,1,0,Free,Warlock,0,0,0,0,0,0,0,0,1,0,None,0,0,0,0,0,0,0,0,0,1,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 4 damage. Discard a random card.,N,None,41.60,52.40
+Hellfire,Spell,0,1,0,Free,Warlock,0,0,0,0,0,0,0,0,1,0,None,0,0,0,0,0,0,0,0,0,4,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 3 damage to ALL characters.,N,None,59.10,52.90
+Totemic Might,Spell,0,1,0,Free,Shaman,0,0,0,0,0,0,0,1,0,0,None,0,0,0,0,0,0,0,0,0,0,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Give your Totems +2 Health.,N,None,0.20,35.70
+Frost Shock,Spell,0,1,0,Free,Shaman,0,0,0,0,0,0,0,1,0,0,None,0,0,0,0,0,0,0,0,0,1,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 1 damage to an enemy character and Freeze it.,N,None,0.60,37.10
+Ancestral Healing,Spell,0,1,0,Free,Shaman,0,0,0,0,0,0,0,1,0,0,None,0,0,0,0,0,0,0,0,0,0,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Restore a minion to full Health and give it Taunt.,N,None,0.40,38.20
+Windfury,Spell,0,1,0,Free,Shaman,0,0,0,0,0,0,0,1,0,0,None,0,0,0,0,0,0,0,0,0,2,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Give a minion Windfury.,N,None,0.60,44.60
+Rockbiter Weapon,Spell,0,1,0,Free,Shaman,0,0,0,0,0,0,0,1,0,0,None,0,0,0,0,0,0,0,0,0,2,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Give a friendly character +3 Attack this turn.,N,None,3.80,47.70
+Bloodlust,Spell,0,1,0,Free,Shaman,0,0,0,0,0,0,0,1,0,0,None,0,0,0,0,0,0,0,0,0,5,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,GIve your minions +3 Attack this turn.,N,None,7.40,47.80
+Hex,Spell,0,1,0,Free,Shaman,0,0,0,0,0,0,0,1,0,0,None,0,0,0,0,0,0,0,0,0,4,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Transform a minion into a 0/1 Frog with Taunt.,N,None,89.70,52.40
+Sinister Strike,Spell,0,1,0,Free,Rogue,0,0,0,0,0,0,1,0,0,0,None,0,0,0,0,0,0,0,0,0,1,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 3 damage to the enemy hero.,N,None,7.10,44.20
+Assassinate,Spell,0,1,0,Free,Rogue,0,0,0,0,0,0,1,0,0,0,None,0,0,0,0,0,0,0,0,0,5,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Destroy an enemy minion.,N,None,4.60,44.40
+Vanish,Spell,0,1,0,Free,Rogue,0,0,0,0,0,0,1,0,0,0,None,0,0,0,0,0,0,0,0,0,6,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Return all minions to their owner's hand.,N,None,32.20,45.10
+Sprint,Spell,0,1,0,Free,Rogue,0,0,0,0,0,0,1,0,0,0,None,0,0,0,0,0,0,0,0,0,7,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Draw 4 cards.,N,None,38.00,45.60
+Backstab,Spell,0,1,0,Free,Rogue,0,0,0,0,0,0,1,0,0,0,None,0,0,0,0,0,0,0,0,0,0,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 2 damage to and undamaged minion.,N,None,46.00,46.40
+Sap,Spell,0,1,0,Free,Rogue,0,0,0,0,0,0,1,0,0,0,None,0,0,0,0,0,0,0,0,0,2,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Return an enemy minion to your opponent's hand.,N,None,44.40,46.40
+Shiv,Spell,0,1,0,Free,Rogue,0,0,0,0,0,0,1,0,0,0,None,0,0,0,0,0,0,0,0,0,2,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 1 damage. Draw a card.,N,None,20.20,46.70
+Fan of Knives,Spell,0,1,0,Free,Rogue,0,0,0,0,0,0,1,0,0,0,None,0,0,0,0,0,0,0,0,0,3,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 1 damage to all enemy minions. Draw a card,N,None,55.40,46.70
+Deadly Poison,Spell,0,1,0,Free,Rogue,0,0,0,0,0,0,1,0,0,0,None,0,0,0,0,0,0,0,0,0,1,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Give your weapon +2 Attack.,N,None,54.00,52.40
+Mind Vision,Spell,0,1,0,Free,Priest,0,0,0,0,0,1,0,0,0,0,None,0,0,0,0,0,0,0,0,0,1,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Put a copy of a random card in your opponent's hand into your hand.,N,None,1.60,37.20
+Holy Nova,Spell,0,1,0,Free,Priest,0,0,0,0,0,1,0,0,0,0,None,0,0,0,0,0,0,0,0,0,5,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 2 to all enemies. Restore 2 Health to all friendly characters.,N,None,7.20,45.50
+Divine Spirit,Spell,0,1,0,Free,Priest,0,0,0,0,0,1,0,0,0,0,None,0,0,0,0,0,0,0,0,0,2,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Double a minion's Health.,N,None,18.30,47.80
+Mind Control,Spell,0,1,0,Free,Priest,0,0,0,0,0,1,0,0,0,0,None,0,0,0,0,0,0,0,0,0,10,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Take control of an enemy minion.,N,None,14.10,49.50
+Power Word: Shield,Spell,0,1,0,Free,Priest,0,0,0,0,0,1,0,0,0,0,None,0,0,0,0,0,0,0,0,0,1,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Give a minion +2 Health. Draw a card.,N,None,48.10,50.10
+Shadow Word: Death,Spell,0,1,0,Free,Priest,0,0,0,0,0,1,0,0,0,0,None,0,0,0,0,0,0,0,0,0,3,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Destroy a minion with an Attack of 5 or more.,N,None,53.80,50.70
+Shadow Word: Pain,Spell,0,1,0,Free,Priest,0,0,0,0,0,1,0,0,0,0,None,0,0,0,0,0,0,0,0,0,2,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Destroy a minion with 3 or less Attack.,N,None,48.50,51.10
+Holy Smite,Spell,0,1,0,Free,Priest,0,0,0,0,0,1,0,0,0,0,None,0,0,0,0,0,0,0,0,0,1,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 2 damage.,N,None,40.90,51.80
+Mind Blast,Spell,0,1,0,Free,Priest,0,0,0,0,0,1,0,0,0,0,None,0,0,0,0,0,0,0,0,0,2,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 5 damage to the enemy hero.,N,None,52.90,52.40
+Humility,Spell,0,1,0,Free,Paladin,0,0,0,0,1,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,1,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Change a minion's Attack to 1.,N,None,0.50,40.80
+Holy Light,Spell,0,1,0,Free,Paladin,0,0,0,0,1,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,2,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Restore 6 Health.,N,None,0.60,41.50
+Hand of Protection,Spell,0,1,0,Free,Paladin,0,0,0,0,1,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,1,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Give a minion Divine Shield.,N,None,0.50,42.10
+Hamer of Wrath,Spell,0,1,0,Free,Paladin,0,0,0,0,1,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,4,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 3 damage. Draw a card.,N,None,1.60,47.90
+Consecration,Spell,0,1,0,Free,Paladin,0,0,0,0,1,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,4,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 2 damage to all enemies.,N,None,30.60,53.20
+Blessing of Kings,Spell,0,1,0,Free,Paladin,0,0,0,0,1,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,4,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Give a minion +4/+4. (+4 Attack/ +4 Health),N,None,21.00,54.50
+Blessing of Might,Spell,0,1,0,Free,Paladin,0,0,0,0,1,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,1,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Give a minion +3 Attack.,N,None,66.00,58.00
+Frost Nova,Spell,0,1,0,Free,Mage,0,0,1,0,0,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,3,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Freeze all enemy minions.,N,None,12.20,39.50
+Mirror Image,Spell,0,1,0,Free,Mage,0,0,1,0,0,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,1,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Summon two 0/2 minions with Taunt.,N,None,2.30,41.10
+Arcane Explosion,Spell,0,1,0,Free,Mage,0,0,1,0,0,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,2,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 1 damage to all enemy minions,N,None,3.10,41.70
+Arcane Intellect,Spell,0,1,0,Free,Mage,0,0,1,0,0,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,3,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Draw 2 cards,N,None,27.30,44.50
+Frostbolt,Spell,0,1,0,Free,Mage,0,0,1,0,0,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,2,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 3 damage to a character and Freeze it.,N,None,28.60,47.50
+Arcane Missiles,Spell,0,1,0,Free,Mage,0,0,1,0,0,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,1,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 3 damage randomly split among all enemies.,N,None,12.10,47.70
+Fireball,Spell,0,1,0,Free,Mage,0,0,1,0,0,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,4,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 6 damage.,N,None,26.00,49.20
+Flamestrike,Spell,0,1,0,Free,Mage,0,0,1,0,0,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,7,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 4 damage to all enemy minions.,N,None,65.60,52.60
+Polymorph,Spell,0,1,0,Free,Mage,0,0,1,0,0,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,4,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Transform a minion into a 1/1 Sheep.,N,None,61.70,53.00
+Multi-Shot,Spell,0,1,0,Free,Hunter,0,1,0,0,0,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,4,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 3 damage to two random enemy minions.,N,None,1.60,49.20
+Arcane Shot,Spell,0,1,0,Free,Hunter,0,1,0,0,0,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,1,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 2 damage,N,None,8.90,51.80
+Hunter's Mark,Spell,0,1,0,Free,Hunter,0,1,0,0,0,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,1,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Change a minion's Health to 1.,N,None,69.80,54.80
+Animal Companion,Spell,0,1,0,Free,Hunter,0,1,0,0,0,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,3,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Summon a random Beast Companion.,N,None,52.20,54.90
+Kill Command,Spell,0,1,0,Free,Hunter,0,1,0,0,0,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,3,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 3 damage. If you have a Beast; deal 5 damage instead.,N,None,51.40,55.00
+Tracking,Spell,0,1,0,Free,Hunter,0,1,0,0,0,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,1,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Look at the top three cards of your deck. Draw one and discard the others.,N,None,82.90,55.10
+Mark of the Wild,Spell,0,1,0,Free,Druid,1,0,0,0,0,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,2,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Give a minion Taunt and +2/+2. (+2 Attack/+2 Health),N,None,0.70,37.90
+Healing Touch,Spell,0,1,0,Free,Druid,1,0,0,0,0,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,3,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Restore 8 Health.,N,None,0.50,40.10
+Claw,Spell,0,1,0,Free,Druid,1,0,0,0,0,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,1,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Give your hero +2 Attack this turn and 2 Armor.,N,None,0.80,45.50
+Starfire,Spell,0,1,0,Free,Druid,1,0,0,0,0,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,6,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 5 damage. Draw a card.,N,None,1.20,46.50
+Moonfire,Spell,0,1,0,Free,Druid,1,0,0,0,0,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,0,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 1 damage.,N,None,33.20,52.60
+Wild Growth,Spell,0,1,0,Free,Druid,1,0,0,0,0,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,2,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Gain an empty Mana Crystal.,N,None,94.80,53.00
+Swipe,Spell,0,1,0,Free,Druid,1,0,0,0,0,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,4,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Deal 4 damage to an enemy and 1 damage to all other enemies.,N,None,94.10,53.00
+Innervate,Spell,0,1,0,Free,Druid,1,0,0,0,0,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,0,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Gain 1 Mana Crystal this turn only.,N,None,27.70,53.20
+Savage Roar,Spell,0,1,0,Free,Druid,1,0,0,0,0,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,3,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,B,Give your characters +2 Attack this turn.,N,None,14.50,53.20
+Arcanite Reaper,Weapon,0,0,1,Free,Warrior,0,0,0,0,0,0,0,0,0,1,None,0,0,0,0,0,0,0,0,0,5,5,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,3.30,42.00
+Fiery War Axe,Weapon,0,0,1,Free,Warrior,0,0,0,0,0,0,0,0,0,1,None,0,0,0,0,0,0,0,0,0,3,3,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,10.70,49.20
+Assassin's Blade,Weapon,0,0,1,Free,Rogue,0,0,0,0,0,0,1,0,0,0,None,0,0,0,0,0,0,0,0,0,5,3,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,0.40,36.00
+Light's Justice,Weapon,0,0,1,Free,Paladin,0,0,0,0,1,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,1,1,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,N,None,N,None,0.60,49.60
+Truesilver Champion,Weapon,0,0,1,Free,Paladin,0,0,0,0,1,0,0,0,0,0,None,0,0,0,0,0,0,0,0,0,4,4,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,W,Whenever your hero attacks; restore 2 Health to it.,N,None,28.60,53.70
