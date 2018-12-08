@@ -268,7 +268,7 @@ def rarityHelper(v):
 
 #takes a model and data set and trains the initalAlpha until it does not produce an alphaDelta change great enough
 #returns the alpha reached
-def alphaTrainer(model, state, xVar, yVar, initialAlpha, alphaDeltaTolerance):
+def alphaTrainer(model, xVar, yVar, initialAlpha, alphaDeltaTolerance):
     alpha = initialAlpha
     alphaDelta = 5.0
     lossA = 0.0
@@ -280,7 +280,7 @@ def alphaTrainer(model, state, xVar, yVar, initialAlpha, alphaDeltaTolerance):
             break
         
         lossB = lossA
-        lossA = test_model(LinRegModel, state, xVar, yVar)
+        lossA = test_model(LinRegModel, train_model(LinRegModel, xVar, yVar), xVar, yVar)
         lossDelta = lossA - lossB
         print("loss A: " + str(lossA))
         print("loss B: " + str(lossB))
@@ -288,7 +288,7 @@ def alphaTrainer(model, state, xVar, yVar, initialAlpha, alphaDeltaTolerance):
         if (lossDelta >= 0.0 and not i == 0):
             alphaDelta = (alphaDelta * -1) / 2
         else:
-            alphaDelta * 2
+            alphaDelta = alphaDelta * 2
             
         alpha = alpha * (1 + alphaDelta)
         LinRegModel.optimizer = tf.train.AdamOptimizer(alpha, epsilon=.0001)
@@ -310,4 +310,4 @@ testCards = Card("basic.csv")
 trainingState = train_model(LinRegModel, trainingCards.x, trainingCards.y)
 np.save("out.npys", trainingState)
 
-alphaTrainer(LinRegModel, trainingState, testCards.x, testCards.y, 0.00007, 0.5)
+#alphaTrainer(LinRegModel, trainingCards.x, trainingCards.y, 0.00007, 0.5)
