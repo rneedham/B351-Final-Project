@@ -79,6 +79,15 @@ class Card:
     def __init__(self, fileName):
         converters = { 5: rarityHelper }
         self.x = np.loadtxt(fileName, delimiter=',', converters = converters, skiprows=1, usecols=(2,3,4,5,7,8,9,10,11,12,13,14,15,16,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44))
+        
+        self.expandedX = []
+        for i in range(len(self.x)):
+            card = []
+            for j in range(len(self.x[i])): #creates inner array of an exploded card
+                for k in range(len(self.x[i])):
+                    card.append(self.x[i][j] * self.x[i][k])
+            self.expandedX.append(card) #appends exploded cards into the new array of exploded cards
+        
         self.y = np.loadtxt(fileName, delimiter=',', skiprows=1, usecols=(49, 50))
 
 
