@@ -184,9 +184,27 @@ class LinRegModel(Model): # a sample model defining a linear regression
     def define_variables(self):
         self.W = tf.Variable(tf.zeros([self.x_dim, self.y_dim]), dtype=tf.float32)
         self.b = tf.Variable(tf.zeros([self.y_dim]), dtype=tf.float32)
+        self.W = tf.Variable(tf.zeros([self.x_dim, self.y_dim]), dtype=tf.float32)
+        self.b = tf.Variable(tf.zeros([self.y_dim]), dtype=tf.float32)
 
     def define_model(self):
         self.predicted_y = self.x @ self.W + self.b
+
+    def define_train(self):
+        self.optimizer = tf.train.AdamOptimizer(.00007, epsilon=.0001)
+        self.training_step = self.optimizer.minimize(self.loss)
+        
+class SigLinRegModel(Model): # a sample model defining a linear regression
+    name = 'siglinreg'
+
+    def define_variables(self):
+        self.W = tf.Variable(tf.zeros([self.x_dim, self.y_dim]), dtype=tf.float32)
+        self.b = tf.Variable(tf.zeros([self.y_dim]), dtype=tf.float32)
+        self.W2 = tf.Variable(tf.zeros([self.x_dim, self.y_dim]), dtype=tf.float32)
+        self.b2 = tf.Variable(tf.zeros([self.y_dim]), dtype=tf.float32)
+
+    def define_model(self):
+        self.predicted_y = tf.math.sigmoid((self.x @ self.W) + self.b) @ self.W2 + self.b2
 
     def define_train(self):
         self.optimizer = tf.train.AdamOptimizer(.00007, epsilon=.0001)
