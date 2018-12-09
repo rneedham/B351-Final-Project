@@ -308,7 +308,9 @@ class Card:
             for j in range(len(self.x[i])): #creates inner array of an exploded card
                 for k in range(len(self.x[i])):
                     card.append(self.x[i][j] * self.x[i][k])
+            card = np.asarray(card)
             self.expandedX.append(card) #appends exploded cards into the new array of exploded cards
+        self.expandedX = np.asarray(self.expandedX)
         
         self.y = np.loadtxt(fileName, delimiter=',', skiprows=1, usecols=(49, 50))
 
