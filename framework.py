@@ -184,31 +184,16 @@ class LinRegModel(Model): # a sample model defining a linear regression
     def define_variables(self):
         self.W = tf.Variable(tf.zeros([self.x_dim, self.y_dim]), dtype=tf.float32)
         self.b = tf.Variable(tf.zeros([self.y_dim]), dtype=tf.float32)
-        self.W = tf.Variable(tf.zeros([self.x_dim, self.y_dim]), dtype=tf.float32)
-        self.b = tf.Variable(tf.zeros([self.y_dim]), dtype=tf.float32)
 
     def define_model(self):
+        print(tf.sigmoid(self.x @ self.W + self.b))
         self.predicted_y = self.x @ self.W + self.b
 
     def define_train(self):
         self.optimizer = tf.train.AdamOptimizer(.00007, epsilon=.0001)
         self.training_step = self.optimizer.minimize(self.loss)
-        
-class SigLinRegModel(Model): # a sample model defining a linear regression
-    name = 'siglinreg'
 
-    def define_variables(self):
-        self.W = tf.Variable(tf.zeros([self.x_dim, self.y_dim]), dtype=tf.float32)
-        self.b = tf.Variable(tf.zeros([self.y_dim]), dtype=tf.float32)
-        self.W2 = tf.Variable(tf.zeros([self.x_dim, self.y_dim]), dtype=tf.float32)
-        self.b2 = tf.Variable(tf.zeros([self.y_dim]), dtype=tf.float32)
-
-    def define_model(self):
-        self.predicted_y = tf.math.sigmoid((self.x @ self.W) + self.b) @ self.W2 + self.b2
-
-    def define_train(self):
-        self.optimizer = tf.train.AdamOptimizer(.00007, epsilon=.0001)
-        self.training_step = self.optimizer.minimize(self.loss)
+    
 
 
 def train_model(model_class, x_instances, y_instances, init_state=None):
@@ -271,6 +256,22 @@ def make_predictions(model_class, state, x_instances, y_dim):
 
     return predicted_y
 
+class LinRegSigmoid(Model): # a sample model defining a linear regression
+    name = 'linreg2'
+
+    def define_variables(self):
+        self.W1 = tf.Variable(tf.zeros([self.x_dim, (self.x_dim + self.y_dim) / 2]), dtype=tf.float32)
+        self.b1 = tf.Variable(tf.zeros([(self.x_dim + self.y_dim) / 2]), dtype=tf.float32)
+        self.W2 = tf.Variable(tf.zeros([(self.x_dim + self.y_dim) / 2, self.y_dim]), dtype=tf.float32)
+        self.b2 = tf.Variable(tf.zeros([self.y_dim]), dtype=tf.float32)
+    def define_model(self):
+        self.hidden_layer = tf.sigmoid(self.x @ self.W1 + self.b1)
+        self.predicted_y = self.hidden_layer @ self.W2 + self.b2
+
+    def define_train(self):
+        self.optimizer = tf.train.AdamOptimizer(.00007, epsilon=.0001)
+        self.training_step = self.optimizer.minimize(self.loss)
+
 def rarityHelper(v):
     if v == b"Free":
        return 0
@@ -282,6 +283,13 @@ def rarityHelper(v):
         return 3
     else:
         return 4
+    pass
+
+def effectHelper(v):
+    if v == b"None":
+        return 0
+    else:
+        return 1
     pass
 
 #takes a model and data set and trains the initalAlpha until it does not produce an alphaDelta change great enough
@@ -314,11 +322,12 @@ def alphaTrainer(model, xVar, yVar, initialAlpha, alphaDeltaTolerance):
         print("alpha delta: " + str(alphaDelta))
     return alpha
 
+
 class Card:
     
     def __init__(self, fileName):
-        converters = { 5: rarityHelper }
-        self.x = np.loadtxt(fileName, delimiter=',', converters = converters, skiprows=1, usecols=(2,3,4,5,7,8,9,10,11,12,13,14,15,16,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44))
+        converters = { 5: rarityHelper, 46: effectHelper }
+        self.x = np.loadtxt(fileName, delimiter=',', converters = converters, skiprows=1, usecols=(2,3,4,5,7,8,9,10,11,12,13,14,15,16,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,46))
         #This is where the "exploded" 2D array will go
         self.expandedX = []
         for i in range(len(self.x)):
@@ -329,13 +338,27 @@ class Card:
             card = np.asarray(card)
             self.expandedX.append(card) #appends exploded cards into the new array of exploded cards
         self.expandedX = np.asarray(self.expandedX)
-        
+        #Normalize y
         self.y = np.loadtxt(fileName, delimiter=',', skiprows=1, usecols=(49, 50))
-
+        self.meanY = np.mean(self.y, axis=0)
+        self.stddevY = np.std(self.y, axis = 0)
+        self.normalizedY = []
+        for i in range(len(self.y)):
+            card = []
+            card.append((self.y[i][0] - self.meanY[0]) / self.stddevY[0])
+            card.append((self.y[i][1] - self.meanY[1]) / self.stddevY[1])
+            card = np.asarray(card)
+            self.normalizedY.append(card)
+        self.normalizedY = np.asarray(self.normalizedY)
 
 trainingCards = Card("classic.csv")
 testCards = Card("basic.csv")
-trainingState = train_model(LinRegModel, trainingCards.x, trainingCards.y)
-np.save("out.npys", trainingState)
+trainingState = train_model(LinRegSigmoid, trainingCards.expandedX, trainingCards.y)
+a = make_predictions(LinRegSigmoid, trainingState, testCards.expandedX, len(testCards.y[0]))
+a = np.asarray(a)
+np.savetxt("basicPredictions.csv", a, delimiter=",")
+
+np.save("linregout.npy", trainingState)
 
 #alphaTrainer(LinRegModel, trainingCards.x, trainingCards.y, 0.00007, 0.5)
+
