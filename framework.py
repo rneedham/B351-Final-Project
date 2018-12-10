@@ -260,9 +260,9 @@ class LinRegSigmoid(Model): # a sample model defining a linear regression
     name = 'linreg2'
 
     def define_variables(self):
-        self.W1 = tf.Variable(tf.zeros([self.x_dim, (self.x_dim + self.y_dim) / 2]), dtype=tf.float32)
-        self.b1 = tf.Variable(tf.zeros([(self.x_dim + self.y_dim) / 2]), dtype=tf.float32)
-        self.W2 = tf.Variable(tf.zeros([(self.x_dim + self.y_dim) / 2, self.y_dim]), dtype=tf.float32)
+        self.W1 = tf.Variable(tf.zeros([self.x_dim, (self.x_dim + self.y_dim) // 2]), dtype=tf.float32)
+        self.b1 = tf.Variable(tf.zeros([(self.x_dim + self.y_dim) // 2]), dtype=tf.float32)
+        self.W2 = tf.Variable(tf.zeros([(self.x_dim + self.y_dim) // 2, self.y_dim]), dtype=tf.float32)
         self.b2 = tf.Variable(tf.zeros([self.y_dim]), dtype=tf.float32)
     def define_model(self):
         self.hidden_layer = tf.sigmoid(self.x @ self.W1 + self.b1)
@@ -327,7 +327,7 @@ class Card:
     
     def __init__(self, fileName):
         converters = { 5: rarityHelper, 46: effectHelper }
-        self.x = np.loadtxt(fileName, delimiter=',', converters = converters, skiprows=1, usecols=(2,3,4,5,7,8,9,10,11,12,13,14,15,16,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,46))
+        self.x = np.loadtxt(fileName, delimiter=',', converters = converters, skiprows=1, usecols=(2,3,4,5,7,8,9,10,11,12,13,14,15,16,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,46,47,48,49,50,51,52,53,54,55,56,57,58,59))
         #This is where the "exploded" 2D array will go
         self.expandedX = []
         for i in range(len(self.x)):
@@ -339,7 +339,7 @@ class Card:
             self.expandedX.append(card) #appends exploded cards into the new array of exploded cards
         self.expandedX = np.asarray(self.expandedX)
         #Normalize y
-        self.y = np.loadtxt(fileName, delimiter=',', skiprows=1, usecols=(49, 50))
+        self.y = np.loadtxt(fileName, delimiter=',', skiprows=1, usecols=(60, 61))
         self.meanY = np.mean(self.y, axis=0)
         self.stddevY = np.std(self.y, axis = 0)
         self.normalizedY = []
@@ -351,14 +351,27 @@ class Card:
             self.normalizedY.append(card)
         self.normalizedY = np.asarray(self.normalizedY)
 
-trainingCards = Card("classic.csv")
-testCards = Card("basic.csv")
-trainingState = train_model(LinRegSigmoid, trainingCards.expandedX, trainingCards.y)
-a = make_predictions(LinRegSigmoid, trainingState, testCards.expandedX, len(testCards.y[0]))
-a = np.asarray(a)
-np.savetxt("basicPredictions.csv", a, delimiter=",")
-
-np.save("linregout.npy", trainingState)
+##After we test minions only
+##trainingCards = Card("classic.csv")
+##testCards = Card("basic.csv")
+##linregState1 = train_model(LinRegModel, trainingCards.x, trainingCards.y)
+##linregState1 = train_model(LinRegModel, trainingCards.expandedX, trainingCards.y)
+##linregState3 = train_model(LinRegModel, trainingCards.x, trainingCards.normalizedY)
+##linregState4 = train_model(LinRegModel, trainingCards.expandedX, trainingCards.normalizedY)
+##sigmoidState1 = train_model(LinRegSigmoid, trainingCards.x, trainingCards.y)
+##sigmoidState1 = train_model(LinRegSigmoid, trainingCards.expandedX, trainingCards.y)
+##sigmoidState3 = train_model(LinRegSigmoid, trainingCards.x, trainingCards.normalizedY)
+##sigmoidState4 = train_model(LinRegSigmoid, trainingCards.expandedX, trainingCards.normalizedY)
+##
+##
+##np.save("linreg1.npy", linregState1)
+##np.save("linreg2.npy", linregState2)
+##np.save("linreg3.npy", linregState3)
+##np.save("linreg4.npy", linregState4)
+##np.save("sigmoid1.npy", sigmoidState1)
+##np.save("sigmoid2.npy", sigmoidState2)
+##np.save("sigmoid3.npy", sigmoidState3)
+##np.save("sigmoid4.npy", sigmoidState4)
 
 #alphaTrainer(LinRegModel, trainingCards.x, trainingCards.y, 0.00007, 0.5)
 
