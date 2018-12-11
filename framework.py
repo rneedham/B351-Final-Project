@@ -294,32 +294,27 @@ def effectHelper(v):
 
 #takes a model and data set and trains the initalAlpha until it does not produce an alphaDelta change great enough
 #returns the alpha reached
-def alphaTrainer(model, xVar, yVar, initialAlpha, alphaDeltaTolerance):
+def alphaTrainer(model, xVar, yVar, initialAlpha):
     alpha = initialAlpha
-    alphaDelta = 5.0
+    alphaDelta = 0.00002
     lossA = 0.0
     lossB = 0.0
     lossDelta = 0.0
     for i in range(10):
         print("step " + str(i))
-        if (abs(alphaDelta) < alphaDeltaTolerance):
-            break
         
         lossB = lossA
-        lossA = test_model(LinRegModel, train_model(LinRegModel, xVar, yVar), xVar, yVar)
+        lossA = test_model(model, train_model(model, xVar, yVar), xVar, yVar)
         lossDelta = lossA - lossB
         print("loss A: " + str(lossA))
         print("loss B: " + str(lossB))
         print("loss delta: " + str(lossDelta))
         if (lossDelta >= 0.0 and not i == 0):
-            alphaDelta = (alphaDelta * -1) / 2
-        else:
-            alphaDelta = alphaDelta * 2
+            alphaDelta = (alphaDelta * -1)
             
-        alpha = alpha * (1 + alphaDelta)
-        LinRegModel.optimizer = tf.train.AdamOptimizer(alpha, epsilon=.0001)
+        alpha = alpha + alphaDelta
+        model.optimizer = tf.train.AdamOptimizer(alpha, epsilon=.0001)
         print("alpha: " + str(alpha))
-        print("alpha delta: " + str(alphaDelta))
     return alpha
 
 
@@ -327,7 +322,7 @@ class Card:
     
     def __init__(self, fileName):
         converters = { 5: rarityHelper, 46: effectHelper }
-        self.x = np.loadtxt(fileName, delimiter=',', converters = converters, skiprows=1, usecols=(2,3,4,5,7,8,9,10,11,12,13,14,15,16,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,46,47,48,49,50,51,52,53,54,55,56,57,58,59))
+        self.x = np.loadtxt(fileName, delimiter=',', converters = converters, skiprows=1, usecols=(2,3,4,5,7,8,9,10,11,12,13,14,15,16,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,46,47,48,49,50,51,52,53,54,55,56,57,58))
         #This is where the "exploded" 2D array will go
         self.expandedX = []
         for i in range(len(self.x)):
@@ -339,7 +334,7 @@ class Card:
             self.expandedX.append(card) #appends exploded cards into the new array of exploded cards
         self.expandedX = np.asarray(self.expandedX)
         #Normalize y
-        self.y = np.loadtxt(fileName, delimiter=',', skiprows=1, usecols=(60, 61))
+        self.y = np.loadtxt(fileName, delimiter=',', skiprows=1, usecols=(62, 63))
         self.meanY = np.mean(self.y, axis=0)
         self.stddevY = np.std(self.y, axis = 0)
         self.normalizedY = []
@@ -351,27 +346,26 @@ class Card:
             self.normalizedY.append(card)
         self.normalizedY = np.asarray(self.normalizedY)
 
+trainingCards = Card("classic_minions.csv")
+
+#alphaTrainer(LinRegModel, trainingCards.x, trainingCards.normalizedY, 0.00007)
+
 ##After we test minions only
-##trainingCards = Card("classic.csv")
-##testCards = Card("basic.csv")
-##linregState1 = train_model(LinRegModel, trainingCards.x, trainingCards.y)
-##linregState1 = train_model(LinRegModel, trainingCards.expandedX, trainingCards.y)
-##linregState3 = train_model(LinRegModel, trainingCards.x, trainingCards.normalizedY)
-##linregState4 = train_model(LinRegModel, trainingCards.expandedX, trainingCards.normalizedY)
-##sigmoidState1 = train_model(LinRegSigmoid, trainingCards.x, trainingCards.y)
-##sigmoidState1 = train_model(LinRegSigmoid, trainingCards.expandedX, trainingCards.y)
-##sigmoidState3 = train_model(LinRegSigmoid, trainingCards.x, trainingCards.normalizedY)
-##sigmoidState4 = train_model(LinRegSigmoid, trainingCards.expandedX, trainingCards.normalizedY)
-##
-##
-##np.save("linreg1.npy", linregState1)
-##np.save("linreg2.npy", linregState2)
-##np.save("linreg3.npy", linregState3)
-##np.save("linreg4.npy", linregState4)
-##np.save("sigmoid1.npy", sigmoidState1)
-##np.save("sigmoid2.npy", sigmoidState2)
-##np.save("sigmoid3.npy", sigmoidState3)
-##np.save("sigmoid4.npy", sigmoidState4)
+#trainedState = train_model(LinRegModel, trainingCards.x, trainingCards.normalizedY)
+#np.save("state.npy", trainedState)
 
-#alphaTrainer(LinRegModel, trainingCards.x, trainingCards.y, 0.00007, 0.5)
+trainedState = np.load("state.npy")
 
+basicCards = Card("basic_minions.csv")
+koftCards = Card("koft_minions.csv")
+ungoroCards = Card("ungoro_minions.csv")
+
+np.savetxt("basic_predictions.csv", make_predictions(LinRegModel, trainedState, basicCards.x, len(basicCards.y[0])), delimiter=",")
+print("Mean: " + str(basicCards.meanY))
+print("Stardard Deviation: " + str(basicCards.stddevY))
+np.savetxt("koft_predictions.csv", make_predictions(LinRegModel, trainedState, koftCards.x, len(koftCards.y[0])), delimiter=",")
+print("Mean: " + str(koftCards.meanY))
+print("Stardard Deviation: " + str(koftCards.stddevY))
+np.savetxt("ungoro_predictions.csv", make_predictions(LinRegModel, trainedState, ungoroCards.x, len(ungoroCards.y[0])), delimiter=",")
+print("Mean: " + str(ungoroCards.meanY))
+print("Stardard Deviation: " + str(ungoroCards.stddevY))
